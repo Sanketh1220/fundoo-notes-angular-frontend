@@ -1,0 +1,53 @@
+@import "../../scss/common.scss";
+
+.title {
+    margin-left: 11px;
+}
+
+.sub-heading {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    padding-left: 11px;
+}
+
+mat-form-field {
+    padding: 10px;
+}
+
+.email {
+    width: 200px;
+}
+
+.first-name, .last-name {
+    padding-bottom: 0;
+}
+
+mat-checkbox {
+    padding: 10px 0 0 11px;
+}
+
+.checkbox input:checked {
+    color: $base-blue;
+}
+
+.buttons{
+    display: flex;
+    padding: 40px 0 0 11px;
+}
+
+.buttons > h3 {
+    color: $base-blue;
+}
+
+.buttons > h3:hover, .buttons > button {
+    cursor:pointer;
+}
+
+.buttons > button {
+    margin-left: 230px;
+    display: inline;
+    padding: 5px 26px;
+    background-color: $base-blue;
+    border: none;
+    color: #fff;
+    border-radius: 5px;
+}

@@ -1,0 +1,63 @@
+.title {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  padding-top: 20px;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+ul li {
+  font-size: 1.7em;
+}
+
+ul li:nth-child(1) {
+  color: #4285f4;
+}
+
+ul li:nth-child(2) {
+  color: #ea4335;
+}
+
+ul li:nth-child(3) {
+  color: #f9bc06;
+}
+
+ul li:nth-child(4) {
+  color: #4285f4;
+}
+
+ul li:nth-child(5) {
+  color: #34a853;
+}
+
+ul li:nth-child(6) {
+  color: #ea4335;
+}
+
+ul li:nth-child(7) {
+  padding-left: 8px;
+  color: #4285f4;
+}
+
+ul li:nth-child(8) {
+  color: #f9bc06;
+}
+
+ul li:nth-child(9) {
+  color: #34a853;
+}
+
+ul li:nth-child(10) {
+  color: #ea4335;
+}
+
+ul li:nth-child(11) {
+  color: #f9bc06;
+}
+/*# sourceMappingURL=title.component.css.map */

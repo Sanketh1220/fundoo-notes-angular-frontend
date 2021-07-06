@@ -1,0 +1,27 @@
+<div fxLayoutAlign="center center" fxFlexFill class="login">
+  <mat-card fxFlex="30">
+    <mat-card-subtitle>
+      <app-title class="title"></app-title>
+    </mat-card-subtitle>
+    <div class="sub-heading">
+      <h1>Sign In</h1>
+    </div>
+    <div>
+      <form action="" fxLayoutAlign="stretch" fxLayout="column">
+        <mat-form-field hideRequiredMarker appearance="outline">
+          <mat-label>Email</mat-label>
+          <input matInput placeholder="" name="email" required type="email">
+        </mat-form-field>
+        <mat-form-field hideRequiredMarker appearance="outline">
+          <mat-label>Password</mat-label>
+          <input matInput type="password" placeholder="" name="password" required pattern="^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$">
+        </mat-form-field>
+      </form>
+      <h4 [routerLink]="['/forgotPassword']">Forgot Password?</h4>
+      <div class="buttons">
+        <h3 [routerLink]="['/']">Create Account</h3>
+        <button>Login</button>
+      </div>
+    </div>
+  </mat-card>
+</div>

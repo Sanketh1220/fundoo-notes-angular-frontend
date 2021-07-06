@@ -1,0 +1,54 @@
+<div fxLayoutAlign="center center" fxFlexFill>
+  <mat-card>
+    <mat-card-subtitle class="title">
+      <app-title></app-title>
+    </mat-card-subtitle>
+    <div class="sub-heading">
+      <h1>Create Your Fundoo Notes Account</h1>
+    </div>
+    <div class="card">
+      <div>
+        <form fxLayoutAlign="stretch" fxLayout="row">
+          <mat-form-field hideRequiredMarker appearance="outline">
+            <mat-label class="first-name">First Name</mat-label>
+            <input matInput placeholder="" pattern="^[A-za-z]{3,}" name="firstName" required>
+            <mat-hint>You can enter only Alphabets</mat-hint>
+          </mat-form-field>
+          <mat-form-field hideRequiredMarker appearance="outline">
+            <mat-label class="last-name">Last Name</mat-label>
+            <input matInput placeholder="" pattern="^[A-za-z]{3,}" name="lastName" required>
+            <mat-hint>You can enter only Alphabets</mat-hint>
+          </mat-form-field>
+        </form>
+        <form fxLayoutAlign="stretch" fxLayout="column">
+          <mat-form-field hideRequiredMarker flex layout-fill appearance="outline">
+            <mat-label class="email">Email</mat-label>
+            <input matInput placeholder="" required type="email" pattern="^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$">
+            <mat-hint>You can use letters, numbers & periods</mat-hint>
+          </mat-form-field>
+        </form>
+        <form>
+          <mat-form-field hideRequiredMarker appearance="outline">
+            <mat-label>Password</mat-label>
+            <input matInput type="password" placeholder="" pattern="^(?=.*[A-Z])(?=.*[0-9])(?=.*\W)[a-zA-Z0-9\#]{8,}$"
+              required>
+            <mat-hint>Use 8 characters with a mix of letters, numbers & symbols</mat-hint>
+          </mat-form-field>
+          <mat-form-field hideRequiredMarker appearance="outline">
+            <mat-label>Confirm</mat-label>
+            <input matInput type="password" placeholder="" pattern="^(?=.*[A-Z])(?=.*[0-9])(?=.*\W)[a-zA-Z0-9\#]{8,}$"
+              required>
+            <mat-hint>Make sure password and confirm password are same</mat-hint>
+          </mat-form-field>
+        </form>
+        <div class="checkbox">
+          <mat-checkbox class="example-margin">Show Password</mat-checkbox>
+        </div>
+        <div class="buttons">
+          <h3 [routerLink]="['/login']">Sign in instead</h3>
+          <button>Next</button>
+        </div>
+      </div>
+    </div>
+  </mat-card>
+</div>
