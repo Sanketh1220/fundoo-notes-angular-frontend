@@ -14,8 +14,8 @@ export class HttpService {
 
   constructor(private http: HttpClient) { }
 
-  postData(data: any, url: any) {
-    return this.http.post(data, url)
+  postData(url: any, data: any) {
+    return this.http.post(url, data)
   }
 
   postDataWithHeader(data: any, url: any) {

@@ -1,7 +1,6 @@
 import { UserService } from './../../services/user.service';
 import { Component, OnInit } from '@angular/core';
-import { FormControl, FormGroup } from '@angular/forms';
-import { User } from './registration.model';
+import { FormControl } from '@angular/forms';
 @Component({
   selector: 'app-registration',
   templateUrl: './registration.component.html',
@@ -9,50 +8,35 @@ import { User } from './registration.model';
 })
 export class RegistrationComponent implements OnInit {
 
+  constructor(private registrationService: UserService) {  }
+
   ngOnInit(): void {
   }
 
-  // constructor(private registrationService: UserService) {  }
-
-  // ngOnInit(): void {
-  // }
-
-  user = new User();
-  message: any
-  data: any
-  error: any
-
-  constructor(private registrationService: UserService) {  }
-
-  form = new FormGroup({
-    firstName: new FormControl(''),
-    lastName: new FormControl(''),
-    email: new FormControl(''),
-    password: new FormControl(''),
-  })
-
-  // firstName = new FormControl('');
-  // lastName = new FormControl('');
-  // email = new FormControl('');
-  // password = new FormControl('');
+  firstName = new FormControl('');
+  lastName = new FormControl('');
+  email = new FormControl('');
+  password = new FormControl('');
 
   // userData = {
-  //   firstName: this.firstName.value,
-  //   lastName : this.lastName.value,
-  //   email : this.email.value,
-  //   password: this.password.value,
+  //   firstName: this.firstName.setValue(''),
+  //   lastName : this.lastName.setValue(''),
+  //   email : this.email.setValue(''),
+  //   password: this.password.setValue(''),
   // }
 
   submit() {
-    console.log(this.user);
-    this.registrationService.registerUser(this.user).subscribe(response => {
+    var userData = {
+      firstName: this.firstName.value,
+      lastName : this.lastName.value,
+      email : this.email.value,
+      password: this.password.value,
+    }
+    console.log(userData);
+    this.registrationService.registerUser(userData).subscribe(response => {
       console.log(response);
-      this.data = response
-      this.message = this.data.message
     }, error => {
       console.log(error);
-      this.error = error
-      this.message = this.data.message
     })
 
   }
