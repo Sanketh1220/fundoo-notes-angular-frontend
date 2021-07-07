@@ -14,6 +14,7 @@ import {DemoMaterialModule} from './material.module';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { PasswordResetComponent } from './pages/password-reset/password-reset.component';
 import { ForgotPasswordComponent } from './pages/forgot-password/forgot-password.component';
+import { SuccessfulRegistrationComponent } from './pages/successful-registration/successful-registration.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { ForgotPasswordComponent } from './pages/forgot-password/forgot-password
     RegistrationComponent,
     LoginComponent,
     PasswordResetComponent,
-    ForgotPasswordComponent
+    ForgotPasswordComponent,
+    SuccessfulRegistrationComponent
   ],
   imports: [
     BrowserModule,
