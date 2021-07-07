@@ -10,17 +10,17 @@
       <form action="" fxLayoutAlign="stretch" fxLayout="column">
         <mat-form-field hideRequiredMarker appearance="outline">
           <mat-label>Email</mat-label>
-          <input matInput placeholder="" name="email" required type="email">
+          <input matInput placeholder="" name="email" required type="email" [formControl]="email">
         </mat-form-field>
         <mat-form-field hideRequiredMarker appearance="outline">
           <mat-label>Password</mat-label>
-          <input matInput type="password" placeholder="" name="password" required pattern="^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$">
+          <input matInput type="password" placeholder="" name="password" required pattern="^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$" [formControl]="password">
         </mat-form-field>
       </form>
       <h4 [routerLink]="['/forgotPassword']">Forgot Password?</h4>
       <div class="buttons">
         <h3 [routerLink]="['/']">Create Account</h3>
-        <button>Login</button>
+        <button type="submit" (click)="submit()">Login</button>
       </div>
     </div>
   </mat-card>

@@ -18,13 +18,6 @@ export class RegistrationComponent implements OnInit {
   email = new FormControl('');
   password = new FormControl('');
 
-  // userData = {
-  //   firstName: this.firstName.setValue(''),
-  //   lastName : this.lastName.setValue(''),
-  //   email : this.email.setValue(''),
-  //   password: this.password.setValue(''),
-  // }
-
   submit() {
     var userData = {
       firstName: this.firstName.value,
