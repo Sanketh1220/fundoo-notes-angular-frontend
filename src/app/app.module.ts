@@ -7,6 +7,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { TitleComponent } from './components/title/title.component';
 import { RegistrationComponent } from './pages/registration/registration.component';
 import { LoginComponent } from './pages/login/login.component';
+import { HttpClientModule } from '@angular/common/http';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms'
 
 import {DemoMaterialModule} from './material.module';
 import { FlexLayoutModule } from '@angular/flex-layout';
@@ -27,7 +29,10 @@ import { ForgotPasswordComponent } from './pages/forgot-password/forgot-password
     AppRoutingModule,
     BrowserAnimationsModule,
     DemoMaterialModule,
-    FlexLayoutModule
+    FlexLayoutModule,
+    HttpClientModule,
+    FormsModule, 
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
