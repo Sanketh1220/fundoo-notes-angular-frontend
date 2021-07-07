@@ -1,0 +1,52 @@
+.search {
+    padding-left: 5%;
+    padding-bottom: 100%;
+    margin-bottom: 100%;
+    padding-top: 2%;
+}
+
+.title {
+    padding-top: -1%;
+}
+
+.frame {
+    margin-left: 0%;
+    height: auto;
+    overflow: hidden;
+
+    mat-card {
+        display: flex;
+    }
+}
+
+// .logout-btn {
+//     @include buttonStyle;
+// }
+
+.content {
+    padding-top: 8px;
+    padding-bottom: 10px;
+    padding-right: 20px;
+    padding-left: 20px;
+
+    h3 {
+        text-align: center; 
+    }
+
+    .logout-btn-style {
+        text-align: center;
+    }
+}
+
+.profile-btn {
+    font-size: 32px;
+}
+
+.menu-style {
+    margin-left: 60%;
+}
+
+::ng-deep .mat-tooltip  {
+    white-space: pre-line    !important;
+    background-color: #f1f3f4;
+}

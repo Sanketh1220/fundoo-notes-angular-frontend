@@ -1,3 +1,4 @@
+import { SideNavigationComponent } from './components/side-navigation/side-navigation.component';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
@@ -8,13 +9,15 @@ import { TitleComponent } from './components/title/title.component';
 import { RegistrationComponent } from './pages/registration/registration.component';
 import { LoginComponent } from './pages/login/login.component';
 import { HttpClientModule } from '@angular/common/http';
-import {FormsModule, ReactiveFormsModule} from '@angular/forms'
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import {DemoMaterialModule} from './material.module';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { PasswordResetComponent } from './pages/password-reset/password-reset.component';
 import { ForgotPasswordComponent } from './pages/forgot-password/forgot-password.component';
 import { SuccessfulRegistrationComponent } from './pages/successful-registration/successful-registration.component';
+import { DashboardComponent } from './components/dashboard/dashboard.component';
+import { SearchComponent } from './components/search/search.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +27,10 @@ import { SuccessfulRegistrationComponent } from './pages/successful-registration
     LoginComponent,
     PasswordResetComponent,
     ForgotPasswordComponent,
-    SuccessfulRegistrationComponent
+    SuccessfulRegistrationComponent,
+    DashboardComponent,
+    SideNavigationComponent,
+    SearchComponent
   ],
   imports: [
     BrowserModule,

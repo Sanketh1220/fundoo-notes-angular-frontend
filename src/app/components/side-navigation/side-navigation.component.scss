@@ -1,0 +1,53 @@
+#sidenavContainer {
+    margin-top: 5%;
+}
+
+#sidenav {
+    width: 16%;
+}
+
+#sidenav.menu-close {
+    width: 4%;
+}
+
+#sidenav .menu-item {
+    width: 100%;
+    border-radius: 20px;
+    text-align: left;
+    overflow: hidden; 
+}
+
+#sidenav .menu-item:hover {
+  background: orange;
+  border-top-left-radius: 0px;
+  border-top-right-radius: 25px;
+  border-bottom-right-radius: 25px;
+  border-bottom-left-radius: 0px;
+}
+#sidenav .menu-item mat-icon {
+    margin-right: 20px;
+    margin-left: 12px;
+}
+
+.main-content{
+    background-color: rgb(255, 255, 255);
+}
+
+body {
+    font-family: Roboto, Arial, sans-serif;
+    padding: 0;
+    margin: 0;
+}
+
+#toolbarMenu {
+    cursor: pointer;
+    margin-right: 20px;
+}
+#mainToolbar .toolbar-spacer {
+    flex: 1 1 auto;
+}
+
+#mainToolbar .toolbar-icon {
+    cursor: pointer;
+    margin: 0 8px;
+}
