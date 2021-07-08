@@ -1,7 +1,7 @@
-import { HttpHeaders } from '@angular/common/http';
 import { UserService } from './../../services/user.service';
 import { Component, OnInit } from '@angular/core';
 import { FormControl } from '@angular/forms';
+import { Router, ActivatedRoute, Params } from '@angular/router';
 
 @Component({
   selector: 'app-password-reset',
@@ -9,21 +9,29 @@ import { FormControl } from '@angular/forms';
   styleUrls: ['./password-reset.component.scss']
 })
 export class PasswordResetComponent implements OnInit {
+  // private token: string;
 
-  constructor(private resetPasswordService: UserService) { }
+  constructor(private resetPasswordService: UserService,
+    private activatedRoute: ActivatedRoute,
+    private router: Router) { }
 
-  ngOnInit(): void {
+  ngOnInit() {
+    this.activatedRoute.params.forEach((params: Params) => {
+      var token: string;
+      token = params['token'];
+      console.log('token in ngOnIt', token);
+    })
   }
 
   password = new FormControl('');
   confirm = new FormControl('');
 
   submit() {
-    const token = "heyyy";
+    var token = "hey";
     var userData = {
       password: this.password.value,
       confirmPassword: this.confirm.value
-    }
+    };
     this.resetPasswordService.resetPassword(userData, token).subscribe(response => {
       console.log(response);
     }, error => {
