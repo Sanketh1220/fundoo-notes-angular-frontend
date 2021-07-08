@@ -2,7 +2,7 @@
   <mat-card fxFlex="100">
     <div>
       <button mat-icon-button malToolTip="Main menu">
-        <mat-icon>menu</mat-icon>
+        <mat-icon (click)="toggle()">menu</mat-icon>
       </button>
     </div>
     <div class="keep-icon" role="button">
@@ -13,29 +13,29 @@
       </button>
     </div>
     <div class="title">
-        <app-title></app-title>
+      <app-title></app-title>
     </div>
     <div class="search">
-        <app-search></app-search>
+      <app-search></app-search>
     </div>
     <div class="menu-style">
-        <button mat-icon-button>
+      <button mat-icon-button>
+        <div>
+          <mat-menu #menu="matMenu">
             <div>
-                <mat-menu>
-                    <div>
-                        <h3>Hello, firstName</h3>
-                        <h3>users.email@gmail.com</h3>
-                        <div>
-                            <button mat-stroked-button class="logout-btn-style">Logout</button>
-                        </div>
-                    </div>
-                </mat-menu>
+              <h3>Hello, firstName</h3>
+              <h3>users.email@gmail.com</h3>
+              <div>
+                <button mat-stroked-button class="logout-btn-style">Logout</button>
+              </div>
             </div>
-            <mat-icon class="profile-btn" fontSet="material-icons-outlined">account_circle</mat-icon>
-        </button>
+          </mat-menu>
+        </div>
+        <mat-icon class="profile-btn" fontset="material-icons-outlined">account_circle</mat-icon>
+      </button>
     </div>
     <div>
-        <app-side-navigation [toggle]="isMenuOpen"></app-side-navigation>
+      <app-side-navigation [toggle]="isMenuOpen"></app-side-navigation>
     </div>
   </mat-card>
 </div>

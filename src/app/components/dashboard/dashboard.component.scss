@@ -19,9 +19,9 @@
     }
 }
 
-// .logout-btn {
-//     @include buttonStyle;
-// }
+.logout-btn {
+    // @include buttonStyle;
+}
 
 .content {
     padding-top: 8px;
@@ -48,5 +48,5 @@
 
 ::ng-deep .mat-tooltip  {
     white-space: pre-line    !important;
-    background-color: #f1f3f4;
+    background-color: #fff;
 }

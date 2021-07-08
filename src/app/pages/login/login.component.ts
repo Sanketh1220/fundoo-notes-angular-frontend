@@ -31,6 +31,7 @@ export class LoginComponent implements OnInit {
       this.data = response
       this.token = this.data.token
       localStorage.setItem('token', this.token)
+      localStorage.setItem('email', userData.email)
     }, error => {
       console.log(error);
     })
