@@ -1,6 +1,6 @@
 <div class="side-nav">
     <mat-sidenav-container id="sidenavContainer" fullscreen>
-        <mat-sidenav opened id="sidenav">
+        <mat-sidenav mode="side" id="sidenav" [class.menu-close]="!toggle" [class.menu-open]="toggle" opened>
             <div>
                 <button mat-icon-button class="menu-item">
                     <mat-icon fontset="material-icons-outlined">lightbulb</mat-icon>

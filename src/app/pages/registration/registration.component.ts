@@ -1,6 +1,7 @@
 import { UserService } from './../../services/user.service';
 import { Component, OnInit } from '@angular/core';
 import { FormControl } from '@angular/forms';
+import { MatSnackBar } from '@angular/material/snack-bar';
 @Component({
   selector: 'app-registration',
   templateUrl: './registration.component.html',
@@ -8,7 +9,8 @@ import { FormControl } from '@angular/forms';
 })
 export class RegistrationComponent implements OnInit {
 
-  constructor(private registrationService: UserService) {  }
+  constructor(private registrationService: UserService,
+    private snackBar: MatSnackBar) {  }
 
   ngOnInit(): void {
   }
@@ -28,8 +30,10 @@ export class RegistrationComponent implements OnInit {
     console.log(userData);
     this.registrationService.registerUser(userData).subscribe(response => {
       console.log(response);
+      this.snackBar.open('Registration Successful', '', {duration: 200})
     }, error => {
       console.log(error);
+      this.snackBar.open('Registration not  Successful', '', {duration: 200})
     })
 
   }
