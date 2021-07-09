@@ -20,7 +20,7 @@
       <h4 [routerLink]="['/forgotPassword']">Forgot Password?</h4>
       <div class="buttons">
         <h3 [routerLink]="['/']">Create Account</h3>
-        <button type="submit" (click)="submit()">Login</button>
+        <button type="submit" [routerLink]="['/dashboard']" (click)="submit()">Login</button>
       </div>
     </div>
   </mat-card>

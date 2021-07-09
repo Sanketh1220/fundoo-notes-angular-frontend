@@ -9,10 +9,16 @@ export class DashboardComponent implements OnInit {
 
   isMenuOpen = false;
 
+  email = localStorage.getItem('email')
+
   constructor() { }
 
   toggle() {
     this.isMenuOpen = !this.isMenuOpen
+  }
+
+  clearStorage() {
+    localStorage.clear()
   }
 
   ngOnInit(): void {
