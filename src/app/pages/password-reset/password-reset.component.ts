@@ -20,6 +20,7 @@ export class PasswordResetComponent implements OnInit {
       var token: string;
       token = params['token'];
       console.log('token in ngOnIt', token);
+      localStorage.setItem('resetToken', token);
     })
   }
 
@@ -27,12 +28,13 @@ export class PasswordResetComponent implements OnInit {
   confirm = new FormControl('');
 
   submit() {
-    var token = "hey";
+    var resetToken = localStorage.getItem('resetToken')
+    console.log('ResetToken', resetToken);
     var userData = {
       password: this.password.value,
       confirmPassword: this.confirm.value
     };
-    this.resetPasswordService.resetPassword(userData, token).subscribe(response => {
+    this.resetPasswordService.resetPassword(userData, resetToken).subscribe(response => {
       console.log(response);
     }, error => {
       console.log(error);
