@@ -1,3 +1,4 @@
+import { CreateNoteComponent } from './components/create-note/create-note.component';
 import { PasswordResetComponent } from './pages/password-reset/password-reset.component';
 import { ForgotPasswordComponent } from './pages/forgot-password/forgot-password.component';
 import { NgModule } from '@angular/core';
@@ -11,7 +12,10 @@ const routes: Routes = [
   {path: 'login', component: LoginComponent},
   {path: 'forgotPassword', component: ForgotPasswordComponent},
   {path: 'resetPassword/:token', component: PasswordResetComponent},
-  {path: 'dashboard', component: DashboardComponent}
+  {path: 'dashboard', component: DashboardComponent, children: [
+    {path: '', component: CreateNoteComponent},  
+  ]
+}
 ];
 
 @NgModule({

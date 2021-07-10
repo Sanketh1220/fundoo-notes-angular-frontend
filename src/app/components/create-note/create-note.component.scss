@@ -1,0 +1,38 @@
+.addNote{
+    margin-left: 10px;
+}
+.title{
+  font-family: 'Google Sans',Roboto,Arial,sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.close-button{
+  display: flex; 
+  justify-content:space-between;
+  margin-top: 20px;
+  margin-left: -2px;
+}
+
+.frame {
+    width: 40%;
+    margin-left: 38%;
+    height: 0%;
+    padding-top: 1.8%;
+    overflow: hidden;
+}
+
+.get-note-frame {
+  margin-left: 17%;
+  padding-top: 2%;
+  width: 80%;
+  overflow: hidden;
+}
+
+.title-form {
+  padding-top: 1.5%;
+}
+
+.pin-btn{
+  margin-left: 80%;
+}

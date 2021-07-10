@@ -17,6 +17,7 @@ import { PasswordResetComponent } from './pages/password-reset/password-reset.co
 import { ForgotPasswordComponent } from './pages/forgot-password/forgot-password.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { SearchComponent } from './components/search/search.component';
+import { CreateNoteComponent } from './components/create-note/create-note.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { SearchComponent } from './components/search/search.component';
     ForgotPasswordComponent,
     DashboardComponent,
     SideNavigationComponent,
-    SearchComponent
+    SearchComponent,
+    CreateNoteComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,25 @@
+<div flexLayoutAlign="center center" class="frame">
+    <mat-expansion-panel hideToggle class="addNote">
+        <mat-expansion-panel-header>
+            <mat-panel-title>
+                <form class="title-form" #noteForm="ngForm">
+                    <input class="title" matInput placeholder="Title" autocomplete="off"
+                        type="text" name="first">
+                </form>
+                <div class="pin-btn">
+                    <button mat-icon-button>
+                        <mat-icon fontSet="material-icons-outlined" aria-label="Remind me" matTooltip="Pin note">push_pin</mat-icon>
+                    </button>
+                    </div>
+            </mat-panel-title>
+        </mat-expansion-panel-header>
+        <form #noteForm="ngForm">
+            <input class="title" matInput placeholder="Take a note..." autocomplete="off" type="text" name="first">
+            <div class="close-button">
+                <button mat-button>close</button>
+            </div>
+        </form>
+    </mat-expansion-panel>
+</div>
+<div class="get-note-frame">
+</div>
