@@ -19,14 +19,18 @@
     margin-left: 38%;
     height: 0%;
     padding-top: 1.8%;
-    overflow: hidden;
+    // overflow: hidden;
 }
 
 .get-note-frame {
   margin-left: 17%;
   padding-top: 2%;
   width: 80%;
-  overflow: hidden;
+  // overflow: hidden;
+}
+
+input {
+  border: none;
 }
 
 .title-form {

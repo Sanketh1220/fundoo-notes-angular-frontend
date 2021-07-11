@@ -12,8 +12,9 @@ const routes: Routes = [
   {path: 'login', component: LoginComponent},
   {path: 'forgotPassword', component: ForgotPasswordComponent},
   {path: 'resetPassword/:token', component: PasswordResetComponent},
+  {path: 'createNote', component: CreateNoteComponent},
   {path: 'dashboard', component: DashboardComponent, children: [
-    {path: '', component: CreateNoteComponent},  
+    {path: '', component: CreateNoteComponent},
   ]
 }
 ];

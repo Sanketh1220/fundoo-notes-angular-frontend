@@ -2,7 +2,7 @@
     <mat-expansion-panel hideToggle class="addNote">
         <mat-expansion-panel-header>
             <mat-panel-title>
-                <form class="title-form" #noteForm="ngForm">
+                <form class="title-form">
                     <input class="title" matInput placeholder="Title" autocomplete="off"
                         type="text" name="first">
                 </form>
@@ -13,13 +13,11 @@
                     </div>
             </mat-panel-title>
         </mat-expansion-panel-header>
-        <form #noteForm="ngForm">
+        <form>
             <input class="title" matInput placeholder="Take a note..." autocomplete="off" type="text" name="first">
             <div class="close-button">
                 <button mat-button>close</button>
             </div>
         </form>
     </mat-expansion-panel>
-</div>
-<div class="get-note-frame">
 </div>
