@@ -10,6 +10,8 @@ import { RegistrationComponent } from './pages/registration/registration.compone
 import { LoginComponent } from './pages/login/login.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { MatIconModule } from '@angular/material/icon';
+import { MatTooltipModule } from '@angular/material/tooltip';
 
 import {DemoMaterialModule} from './material.module';
 import { FlexLayoutModule } from '@angular/flex-layout';
@@ -18,6 +20,7 @@ import { ForgotPasswordComponent } from './pages/forgot-password/forgot-password
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { SearchComponent } from './components/search/search.component';
 import { CreateNoteComponent } from './components/create-note/create-note.component';
+import { IconsComponent } from './components/icons/icons.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +33,8 @@ import { CreateNoteComponent } from './components/create-note/create-note.compon
     DashboardComponent,
     SideNavigationComponent,
     SearchComponent,
-    CreateNoteComponent
+    CreateNoteComponent,
+    IconsComponent
   ],
   imports: [
     BrowserModule,
@@ -40,7 +44,9 @@ import { CreateNoteComponent } from './components/create-note/create-note.compon
     FlexLayoutModule,
     HttpClientModule,
     FormsModule, 
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    MatIconModule,
+    MatTooltipModule
   ],
   providers: [],
   bootstrap: [AppComponent]
