@@ -1,5 +1,5 @@
 <div flexLayoutAlign="center center" class="frame">
-    <mat-expansion-panel hideToggle class="addNote">
+    <mat-expansion-panel hideToggle class="addNote" [expanded]="panelSize">
         <mat-expansion-panel-header>
             <mat-panel-title>
                 <form class="title-form">
@@ -17,7 +17,7 @@
             <input class="title" matInput placeholder="Take a note..." autocomplete="off" type="text" name="first">
             <div class="close-button">
                 <app-icons></app-icons>
-                <button mat-button>close</button>
+                <button mat-button (click)="close();">close</button>
             </div>
         </form>
     </mat-expansion-panel>

@@ -13,4 +13,8 @@ export class CreateNoteComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  close() {
+    return this.panelSize = !this.panelSize
+  }
+
 }
