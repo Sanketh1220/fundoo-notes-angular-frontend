@@ -1,53 +1,78 @@
+@mixin common {
+  all: unset;
+  border: 1px solid red;
+}
+
 .search {
   padding-left: 5%;
   padding-bottom: 100%;
   margin-bottom: 100%;
   padding-top: 2%;
+  @include common;
 }
 
 .title {
   padding-top: -1%;
+  @include common;
 }
 
 .frame {
   margin-left: 0%;
   height: auto;
-  overflow: hidden;
+  overflow: inherit;
+  @include common;
 
   mat-card {
+    @include common;
     display: flex;
   }
 }
 
+.header-dashboard {
+  @include common;
+  height: 15vh;
+  display: flex;
+  align-item: space-between;
+  width: 100%;
+
+}
+
 .logout-btn {
+  @include common;
   background-color: #005A9C;
   color: #fff;
 }
 
 .content {
+  @include common;
   padding-top: 8px;
   padding-bottom: 10px;
   padding-right: 20px;
   padding-left: 20px;
 
   h3 {
+    @include common;
     text-align: center;
   }
 
   .logout-btn-style {
+    @include common;
     text-align: center;
   }
 }
 
 .profile-btn {
+  @include common;
   font-size: 32px;
 }
 
 .menu-style {
+  @include common;
   margin-left: 60%;
 }
 
 ::ng-deep .mat-tooltip {
+  @include common;
   white-space: pre-line !important;
   background-color: #fff;
 }

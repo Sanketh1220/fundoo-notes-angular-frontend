@@ -1,6 +1,7 @@
 .addNote{
     margin-left: 10px;
 }
+
 .title{
   font-family: 'Google Sans',Roboto,Arial,sans-serif;
   font-size: 1rem;
@@ -19,14 +20,14 @@
     margin-left: 38%;
     height: 0%;
     padding-top: 1.8%;
-    // overflow: hidden;
+    overflow: inherit;
 }
 
 .get-note-frame {
   margin-left: 17%;
   padding-top: 2%;
   width: 80%;
-  // overflow: hidden;
+  overflow: inherit;
 }
 
 input {
