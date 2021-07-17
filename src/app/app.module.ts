@@ -12,6 +12,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatIconModule } from '@angular/material/icon';
 import { MatTooltipModule } from '@angular/material/tooltip';
+import { AuthGuardService } from './services/auth-guard.service';
 
 import {DemoMaterialModule} from './material.module';
 import { FlexLayoutModule } from '@angular/flex-layout';
@@ -48,7 +49,7 @@ import { IconsComponent } from './components/icons/icons.component';
     MatIconModule,
     MatTooltipModule
   ],
-  providers: [],
+  providers: [AuthGuardService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
